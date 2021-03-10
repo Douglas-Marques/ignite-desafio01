@@ -15,7 +15,7 @@ export function TaskList() {
   const [newTaskTitle, setNewTaskTitle] = useState("");
 
   function handleCreateNewTask() {
-    if (newTaskTitle === "") return;
+    if (!newTaskTitle) return;
 
     const id = Math.floor(Math.random() * 1000000 + 1);
     setTasks([
